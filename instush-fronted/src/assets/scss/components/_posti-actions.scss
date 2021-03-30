@@ -1,0 +1,39 @@
+
+.posti-actions{
+  width: 100%;
+  
+  .el-dialog {
+    border-radius: 15px;
+  
+
+    .el-dialog__body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      .dialogClosed{
+        border-bottom:none;
+      }
+    }
+    
+    .el-dialog__body >*{
+      cursor: pointer;
+      border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+      color: rgb(38,38,38);
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      min-height: 48px;
+      padding: 15px 0 15px 45%;
+      // margin: 18px 0;
+      
+    }
+
+    .el-dialog__header{
+      display:none;
+    }
+
+  }
+}

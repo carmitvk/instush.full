@@ -1,0 +1,16 @@
+.app-footer{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    border-top:2px solid rgb(248, 242, 242);
+    height: 40px;
+    color:rgb(158, 154, 154);
+
+    .footer{
+        align-self: center;
+    }
+
+    @include for-mobile-layout {
+        height: 30px;
+    }
+}

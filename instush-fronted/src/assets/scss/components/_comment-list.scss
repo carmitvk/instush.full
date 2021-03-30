@@ -1,0 +1,25 @@
+.comment-list{
+    margin: 0 15px;
+    
+    .user-name{
+        padding-right: 0.3rem; 
+        font-weight: 600;
+        font-size: rem(14px);  
+    }
+    .description{
+        font-weight: 400;
+        font-size: rem(14px);
+        color:rgb(38, 38, 38);
+    }
+    .comment{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .all-comments{
+        cursor: pointer;
+        color:rgb(142, 142, 142);
+        font-weight: 400;
+        font-size: rem(14px);
+    }
+}

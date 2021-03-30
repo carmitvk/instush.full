@@ -1,0 +1,43 @@
+.posti-card {
+    cursor: pointer;
+    // background-color: $clr1;
+    // background-image: linear-gradient(to right top, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
+    // .card-image {
+        // mix-blend-mode: multiply;
+        // filter: grayscale(1);
+    // }
+    .card-image:hover{
+        background-color: #fff;
+    }
+    .card-data{
+        padding:10px;
+        opacity: 0;
+        transition: 0.3s;
+
+        &:hover{
+            display: inline-block;
+            background-color: rgba(0,0,0,0.5);
+            color: rgb(230, 236, 236);
+            opacity: 1;
+        }
+
+        .tags-list{
+            .tag {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(230, 236, 236);
+                font-weight: 600;
+            }
+        }
+        .like-icon{
+            margin-left: 2px;
+            font-size:16px;
+            color:white;
+        }
+        
+        .like-count{
+            color:white; 
+        }
+    }
+}
