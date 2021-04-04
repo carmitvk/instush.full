@@ -62,11 +62,16 @@ async function updatePosti(req, res) {//update
 
 async function deletePosti(req, res) {
     try {
-        // if (posti.creator._id !== req.session.user._id){ //temp. middleware? carmit
-        //     res.send({ msg: 'Not authorized. delete only your own postis' }) 
+        var posti = await postiService.getById(req.params.postiId);
+        // if (req.session.user?._id !== posti.creator._id)
+        // {
+        //     console.log('only creator can delete post');
+        //     res.send({ msg: 'Not authorized' }) 
+        // }else{
+
+            await postiService.remove(req.params.postiId)
+            res.send({ msg: 'Deleted successfully' })
         // }
-        await postiService.remove(req.params.postiId)
-        res.send({ msg: 'Deleted successfully' })
     } catch (err) {
         logger.error('Failed to delete posti', err)
         res.status(500).send({ err: 'Failed to delete posti' })

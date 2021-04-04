@@ -35,7 +35,7 @@ export default {
         },
         removePosti(){
             this.$emit('removePosti', this.posti._id);
-            this.$router.push('/')  
+            this.dialogClosed(); 
         }
     },
     computed: {

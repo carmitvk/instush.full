@@ -7,8 +7,10 @@ module.exports = {
 }
 
 // Database Name
-const dbName = 'instush_db'
+const dbName = 'instush'
+// const dbName = 'instush_db'
 
+// 
 var dbConn = null
 
 async function getCollection(collectionName) {

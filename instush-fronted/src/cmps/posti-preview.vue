@@ -111,6 +111,7 @@ export default {
       timerId: null,
       likesDialogVisible: false,
       postiActionsVisible: false,
+      isSavedCurrPosti: this.posti.isSaved
     };
   },
   methods: {
@@ -145,6 +146,7 @@ export default {
       this.$emit('changeLike', this.posti);
     },
     changeSaved(){
+      this.isSavedCurrPosti= !this.isSavedCurrPosti; //for saved
       this.$emit('changeSaved', this.posti);
     },
     changeCommentLike(comment){
@@ -153,8 +155,11 @@ export default {
   },
   computed: {
 
-    isSaved() {
-      return this.posti.isSaved; 
+    isSaved() { // to get updated value, get from store //carmit
+      // return this.posti.isSaved; 
+      return this.isSavedCurrPosti; 
+      // var updatedPosti = this.$store.dispatch({type:'getPostiById', id:this.posti.id});
+      // return updatedPosti.isSaved; 
     },
 
     isLikePosti() {

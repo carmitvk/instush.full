@@ -47,6 +47,16 @@ export const postiStore = {
             }
         },
         
+        // async getPostiById(contex, {id}) {
+        //     try{
+        //         const posti = await postiService.getById(id)
+        //         return posti;
+        //     }catch (err){
+        //         console.log('Store: Cannot getPostiById ...', err);
+        //         throw new Error('Cannot getPostiById...');
+        //     }
+        // },
+
         async changeLike(contex, {data}) {
             const {posti,loggedinUser} = data;
             try{
@@ -130,8 +140,10 @@ export const postiStore = {
                 contex.commit({ type: 'setLoadingState', val:true });
                 const res = await postiService.remove(postiId);
                 console.log('res',res)
-                // await this.dispatch({ type: 'loadPostis'});
-                contex.commit({ type: 'removePosti', postiId });
+                await this.dispatch({ type: 'loadPostis'});
+                // if (res.msg !== 'Not authorized'){
+                    contex.commit({ type: 'removePosti', postiId });
+                // }
             }catch (err){
                 console.log('Store: Cannot remove posti...', err);
                 throw new Error('Cannot remove posti...');
