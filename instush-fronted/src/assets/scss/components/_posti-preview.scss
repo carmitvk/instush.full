@@ -5,9 +5,7 @@
     border: 1.1px solid rgb(231, 231, 231);
     border-radius: 2px;
     max-width: 100%;
-    @include for-mobile-layout {
-      width: 360px;
-  } //carmit
+
 
     .creator-container{
         margin: 0.7rem 15px 0.7rem 0.7rem;
@@ -38,9 +36,6 @@
         }
     }
 
-    @include for-mobile-layout {
-      margin: 0;
-    }
 
     .post-img {
         margin-bottom: 0.2rem;

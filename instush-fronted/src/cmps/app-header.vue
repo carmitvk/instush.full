@@ -4,7 +4,7 @@
     <router-link class="logo-routing-class" to="/">
       <span class="header-logo">Instush</span>
     </router-link>
-    <el-input
+    <el-input v-if="loggedInUser"
       class="header-search"
       @input="debounce"
       placeholder="Search..."

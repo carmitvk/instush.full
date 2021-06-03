@@ -13,9 +13,7 @@
     font-weight: 600;
     color:#262626;
     width: 100%;
-    @include for-mobile-layout {
-      width: 360px;
-    }
+
     margin:0 auto;
     
     display: flex;
@@ -32,14 +30,12 @@
       }
   
       .loggedin-signup{
-      @include for-mobile-layout {
-        flex-direction: column;
-        margin: auto;
-      }
+
       display: flex;
       flex-direction: row;
       justify-content: space-around;;
       align-items: center;
+      flex-wrap: wrap;
       flex-grow: 1;
       }
 
@@ -75,9 +71,8 @@
       border:2px solid rgb(248, 242, 242);
       padding:20px;
       background-color: white;
-      @include for-mobile-layout {
-        padding:60px;
-      }
+      margin-bottom: 10px;
+
     }
     .txt-holder{
       border-radius: 5px;

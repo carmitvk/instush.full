@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a540f659c03de33f1afad79ceafab047.js"
+  "/precache-manifest.d3553b32bb19c96527bcfd9a60adb54d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "instagram-front"});

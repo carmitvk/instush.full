@@ -1,7 +1,7 @@
 <template>
 <div class="posti-new" >
     <el-dialog
-      width="60%"
+      width="80%"
       center
       :title="title"
       :visible.sync="dialogVisible"

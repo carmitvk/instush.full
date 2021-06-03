@@ -14,9 +14,7 @@
         margin: 0 auto;
         display: flex;
         flex-grow: 1;
-        @include for-mobile-layout {
-            max-width: 360px;
-        }
+
 
         .loading {
             display: flex;
@@ -34,9 +32,7 @@
 
             margin: 30px auto 30px;
             width: 100%;
-            @include for-mobile-layout {
-                max-width: 360px;
-            }
+
             .creator {
                 margin: 0.7rem;
 
@@ -52,20 +48,24 @@
                     height: 150px;
                     border-radius: 50%;
                     margin-right: rem(100px);
-                    @include for-mobile-layout {
+
+                }
+
+                @media (max-width: 640px) {
+                   margin: 20px 10px;
+
+                   .creator-img {
                         width: 80px;
                         height: 80px;
-                        margin-right: rem(10px);
+                        margin-right: 20px;
+
                     }
                 }
 
                 .counters-container > * {
-                    margin-right: 40px;
                     color: rgb(73, 73, 73);
                     font-size: 16px;
-                    @include for-mobile-layout {
-                        margin-right: 20px;
-                    }
+
                 }
 
                 .user-data {
@@ -87,6 +87,8 @@
                         cursor: pointer;
                     }
                     .counters-container {
+                        display: flex;
+                        justify-content: space-between;
                         .num {
                             font-weight: 600;
                             color: rgb(38, 38, 38);

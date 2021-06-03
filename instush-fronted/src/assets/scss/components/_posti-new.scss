@@ -11,9 +11,10 @@
     .el-dialog {
         border-radius: 15px;
         max-width: 50%;
-        @include for-mobile-layout {
-            max-width: 320px;
+        @media (max-width: 640px) {
+            max-width: 80%;
         }
+
 
         .el-dialog__header {
             border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
@@ -32,10 +33,7 @@
             .el-dialog__headerbtn {
                 font-size: 30px;
                 top: 8px;
-                @include for-mobile-layout {
-                    font-size: 25px;
-                    right: 6px;
-                }
+
 
                 .el-dialog__close {
                     color: rgb(38, 38, 38);
@@ -74,7 +72,6 @@
 
                 .tags-picker {
                     display: flex;
-                    height: 30px;
                     background-color: white;
                     flex-grow: 1;
                 }
