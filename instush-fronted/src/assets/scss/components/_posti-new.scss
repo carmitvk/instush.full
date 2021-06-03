@@ -12,7 +12,7 @@
         border-radius: 15px;
         max-width: 50%;
         @include for-mobile-layout {
-            max-width: 585px;
+            max-width: 320px;
         }
 
         .el-dialog__header {
@@ -32,6 +32,10 @@
             .el-dialog__headerbtn {
                 font-size: 30px;
                 top: 8px;
+                @include for-mobile-layout {
+                    font-size: 25px;
+                    right: 6px;
+                }
 
                 .el-dialog__close {
                     color: rgb(38, 38, 38);
@@ -91,7 +95,12 @@
                 }
 
                 .input-file{
-                    background-color: rgb(187, 187, 218);
+                    max-width: 85px;
+                    color: rgb(250, 250, 250);
+                }
+                .input-lable{
+                    display: inline;
+                    font-size: 13px;
                 }
             }
         }

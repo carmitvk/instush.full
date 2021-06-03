@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       msg: "",
-      loginCred: {username: '', password: ''},
+      loginCred: {username: 'guest', password: 'guest'},
       signupCred: {username: '', password: '', fullname: ''},
       isLoading: false,
       btnPressed:false,
@@ -76,11 +76,14 @@ export default {
         return
       }
       console.log('this.signupCred.imgUrl=',this.signupCred.imgUrl)
-      if (this.signupCred.imgUrl && !this.btnPressed){
+      // if (this.signupCred.imgUrl && !this.btnPressed){
+        if (!this.signupCred.imgUrl){
+          this.signupCred.imgUrl = 'http://res.cloudinary.com/carmitvk/image/upload/v1617535367/pic7_jcwwpa.jpg';
+        }
         await this.$store.dispatch({ type: "signup", userCred: this.signupCred });
         this.$router.push('/');
         this.signupCred.imgUrl='';
-      }
+      // }
     },
 
     async removeUser(userId) {

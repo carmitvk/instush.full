@@ -1,5 +1,10 @@
 .header {
     border-bottom: 2px solid rgb(248, 242, 242);
+    width: 640px;
+    margin:auto;
+    @include for-mobile-layout {
+        width: 360px;
+    } 
 
     .routing-container {
         display: flex;
@@ -7,10 +12,10 @@
         justify-content: space-between;
         align-items: center;
         width: 640px;
-        margin: 0 auto;
+        // margin: 0 auto;
 
         @include for-mobile-layout {
-            width: 585px;
+            width: 360px;
         }
             
     }
@@ -75,22 +80,47 @@
     }
     @include for-mobile-layout {
         margin: 0;
-        padding: 5px;
+        padding: 2px;
 
         .header-search,
         .el-input__inner {
-            width: 130px;
+            width: 100px;
         }
-
+        .header-logo {
+            font-size: 20px;
+        }
         nav > * {
-            padding-left: 10px;
+            padding-left: 5px;
+            // .home-icon {
+            //     width: 15px;
+            //     height: 50%;
+            // }
+            ._8-yf5{
+                width: 16px;
+                height: 17px; 
+                margin: -10% 0; 
+            }
+            .user-profile-icon {
+                width: 20px;
+                height: 17px;
+                margin: -11% 0;
+                padding-right: 2px;
+            }
+            .add-post-icon {
+                width: 15px;
+                height: 50%;
+            }
+            .login-icon {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         .header-logo {
-            padding-right: 5px;
+            padding-right: 3px;
         }
-        nav .user-profile-icon {
-            margin: 25% 0;
-        }
+        // nav .user-profile-icon {
+        //     margin: 25% 0;
+        // }
     }
 }

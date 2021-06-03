@@ -3,12 +3,18 @@
     background-color: rgb(250, 250, 250);
     display: flex;
     flex-grow: 1;
+    @include for-mobile-layout {
+        max-width: 360px;
+    } //carmit
     
     .user-profile-container{
         max-width: 640px;
         margin: 0 auto;
         display: flex;
         flex-grow: 1;
+        @include for-mobile-layout {
+            max-width: 360px;
+        }
 
         .loading {
             display: flex;
@@ -26,7 +32,9 @@
 
             margin: 30px auto 30px;
             // max-width: 935px;
-
+            @include for-mobile-layout {
+                max-width: 360px;
+            }
             .creator {
                 margin: 0.7rem;
 
@@ -42,12 +50,20 @@
                     height: 150px;
                     border-radius: 50%;
                     margin-right: rem(100px);
+                    @include for-mobile-layout {
+                        width: 80px;
+                        height: 80px;
+                        margin-right: rem(10px);
+                    }
                 }
 
                 .counters-container > * {
                     margin-right: 40px;
                     color: rgb(73, 73, 73);
                     font-size: 16px;
+                    @include for-mobile-layout {
+                        margin-right: 20px;
+                    }
                 }
 
                 .user-data {

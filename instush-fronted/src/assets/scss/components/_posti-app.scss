@@ -5,6 +5,9 @@
     
     .posti-app-container{
         max-width: 640px;
+        @include for-mobile-layout {
+            width: 360px;
+        } //carmit
         margin: 0 auto;
     }
     .postisLoading {

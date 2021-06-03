@@ -28,8 +28,11 @@
             </el-select>
 
             <img class="picture" v-if="postiToEdit.imgUrl" :src="postiToEdit.imgUrl" alt="image"/>
-            <input btn class="input-file" placeholder="Upload file" type="file" id="imgUploader" @change="onUploadImg" />
 
+            <div class="file-container">
+                <input btn class="input-file" placeholder="Upload file" type="file" id="imgUploader" @change="onUploadImg" />
+                <label class="input-lable" for="imgUploader">{{uploadFileTxt}}</label>
+            </div>
             <el-button class="btn" @click="save" type="primary" :loading="btnPressed">Save</el-button>
 
         </form>
@@ -74,6 +77,8 @@ export default {
                 value: 'Funny',
                 label: 'Funny'
             }],
+
+            uploadFileTxt: 'Upload file',
         }
     },
     methods: {
@@ -96,6 +101,7 @@ export default {
                 this.btnPressed = true;
                 this.isLoading = true
                 const res = await uploadImg(ev)
+                this.uploadFileTxt = ev.target.files[0].name
                 this.postiToEdit.imgUrl = res.url
                 this.btnPressed = false;
             }catch(err){

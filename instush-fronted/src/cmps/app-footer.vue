@@ -1,6 +1,6 @@
 <template>
   <section class="app-footer">
-    <div class="footer">@cofferights Carmit Vaknin 2021</div>
+    <div class="footer">@Copyrights Carmit Vaknin 2021</div>
   </section>
 </template>
 

@@ -6,6 +6,9 @@
     border-radius: 2px;
     max-width: 640px;
     width: 640px;
+    @include for-mobile-layout {
+      width: 360px;
+  } //carmit
 
     .creator-container{
         margin: 0.7rem 15px 0.7rem 0.7rem;
