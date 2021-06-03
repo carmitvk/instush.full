@@ -1,30 +1,27 @@
 .messanger {
-  background-color: rgb(250, 250, 250);
+  background-color: #fafafa;
   display: flex;
   flex-grow: 1;
   overflow: auto;
+  height: calc(100vh - 110px);
+  padding: 0 20%;
 
-  @include for-mobile-layout {
-    width: 360px;
+  @media (max-width: 640px) {
+    padding: 0;
   }
 
   .messanger-container {
-    max-width: 640px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
     display: flex;
-    @include for-mobile-layout {
-      max-width: 360px;
-    }
 
     .editor {
       background-color: white;
-      margin: 10px 0;
       border: 1.1px solid #e7e7e7;
       display: flex;
       flex-direction: column;
-
       flex-grow: 1;
-      padding: 10px;
 
       .messages-container {
         flex-grow: 1;
@@ -52,7 +49,6 @@
       }
 
       .write-msg {
-        max-width: 440px;
         height: 65px;
         display: flex;
         justify-content: left;
@@ -189,11 +185,10 @@
     // }
 
     .users-container {
-      margin: 10px 0;
       min-width: 200px;
       border: 1.1px solid #e7e7e7;
       background-color: white;
-      height: calc(100vh - 110px);
+      height: 100%;
       overflow-y: scroll;
 
       .active {

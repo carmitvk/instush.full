@@ -4,8 +4,7 @@
     background-color: white;
     border: 1.1px solid rgb(231, 231, 231);
     border-radius: 2px;
-    max-width: 640px;
-    width: 640px;
+    max-width: 100%;
     @include for-mobile-layout {
       width: 360px;
   } //carmit
